@@ -16,7 +16,7 @@ A poor match mainly costs students time, and a limited campus pilot can be corre
 
 ### How many pieces must move together?
 
-Matching, study preferences, session planning, and safety controls must eventually work together, but they can be delivered as small usable slices. The first slice can support course-based discovery and a confirmed study session without requiring every later feature.
+Matching, study preferences, session planning, and safety controls must eventually work together, but they can be delivered as small usable slices. The first slice can enforce first-semester same-college eligibility, support course-based discovery, and let students compare study goals and availability without requiring every later feature.
 
 Verdict: Short increments, because requirements are uncertain, feedback is readily available, and useful slices can be delivered and adjusted safely.
 
@@ -24,7 +24,7 @@ Verdict: Short increments, because requirements are uncertain, feedback is readi
 
 | Milestone | When | What is true then |
 |---|---|---|
-| Sprint 1 review | 14 September 2026 | A student-council representative has demonstrated and approved course-based partner discovery, preference comparison, and session confirmation against the Sprint 1 acceptance criteria. |
+| Sprint 1 review | 14 September 2026 | A student-council representative has demonstrated and approved same-college course-based partner discovery and preference comparison against the Sprint 1 acceptance criteria. |
 | Limited campus pilot | 28 September 2026 | At least 30 first-year volunteers across three courses have used StudyMatch to attempt a study-partner search, and their outcomes have been recorded. |
 | Pilot evaluation | 12 October 2026 | The client has reviewed a documented pilot report containing participation, successful-session, safety, and response-time results and has decided whether to expand the pilot. |
 

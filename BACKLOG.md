@@ -4,6 +4,7 @@ StudyMatch helps first-year students find compatible classmates and arrange prod
 
 ## Items
 
+- [F] First-year students are matched only with students from their own college during their first semester.
 - [F] First-year students can find study partners who are taking the same course.
 - [F] Students can compare potential partners' study goals and availability with their own.
 - [F] Students can arrange and confirm a study session with matched partners.
@@ -14,6 +15,8 @@ StudyMatch helps first-year students find compatible classmates and arrange prod
 - [NF] Core matching and session-planning tasks are usable with keyboard navigation and screen readers.
 
 ## The change
+
+The Dean's office made same-college matching mandatory for first-year students during their first semester. I placed this item first because it is an immediate, non-negotiable eligibility rule that every match must satisfy. It entered Sprint 1 and displaced the study-session arrangement item, keeping the sprint at three items; compliant matching must work before session planning adds value.
 
 ## From the assistant
 
