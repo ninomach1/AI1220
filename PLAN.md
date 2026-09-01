@@ -24,8 +24,14 @@ Verdict: Short increments, because requirements are uncertain, feedback is readi
 
 | Milestone | When | What is true then |
 |---|---|---|
+| Sprint 1 review | 14 September 2026 | A student-council representative has demonstrated and approved course-based partner discovery, preference comparison, and session confirmation against the Sprint 1 acceptance criteria. |
+| Limited campus pilot | 28 September 2026 | At least 30 first-year volunteers across three courses have used StudyMatch to attempt a study-partner search, and their outcomes have been recorded. |
+| Pilot evaluation | 12 October 2026 | The client has reviewed a documented pilot report containing participation, successful-session, safety, and response-time results and has decided whether to expand the pilot. |
 
 ## Risks
 
 | Risk | Likelihood | Mitigation |
 |---|---|---|
+| Too few first-year students join for useful matches to be available. | Medium | Recruit pilot volunteers through first-year course representatives now and ensure the pilot covers at least three courses before matching begins. |
+| A student encounters harassment or unwanted disclosure of personal details. | Medium | Define approval-only contact sharing, exit, and reporting acceptance criteria now and require them to pass a safety review before the pilot. |
+| Self-reported courses or availability produce irrelevant matches. | Medium | Test the matching assumptions in early student interviews and review failed-search feedback after every pilot session. |
