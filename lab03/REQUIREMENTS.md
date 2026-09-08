@@ -83,70 +83,104 @@ Section 8 distinguishes team proposals from the supplied evidence.
 
 ## 5. User stories and acceptance criteria
 
-Write at least three stories from different stakeholder viewpoints. Each story
-needs at least two acceptance criteria. Across the set, include a failure,
-permission boundary, privacy rule, or other non-happy path.
+### US-1 [Source: S1, S5, UR-1, UR-2, UR-11, UR-15]
 
-### US-1 [Source: S?, UR-?]
+As a student attendee,
 
-As a <role>,
+I want to find followed groups' events and manage my RSVP from my phone,
 
-I want <capability>,
-
-so that <benefit>.
+so that I can take part without exposing my attendance by default.
 
 Acceptance criteria:
 
--
--
+- AC-1.1: Given a student follows groups A and B, when the student opens the combined view, it includes their published, audience-permitted announcements and events and excludes hidden events and members-only events for groups the student has not joined. Unfollowing A removes A's items from that view. [FR-2, FR-8, FR-13]
+- AC-1.2: Given an eligible student RSVPs, when another attendee views the event, that student's name is absent; opting in for that event makes it visible only to the event's audience, and opting out removes it again. A second RSVP submission produces no duplicate; withdrawing removes the current RSVP. [FR-3, FR-4]
+- AC-1.3: Given the A4 configurations, when a tester performs the NFR-3 task set, every task completes without a pointer-only control or screen-reader blocker, and the 360 CSS-pixel layout requires no horizontal page scrolling. [NFR-3]
+- AC-1.4 [Could]: Given followed events on two dates, when the student chooses one date, only events starting on that date in the university timezone appear; clearing it restores both dates, subject to the same audience rules. [FR-18]
+- AC-1.5 [Should]: Under the A5 workload, followed-view and event-detail requests meet NFR-4: p95 display time at most 2 seconds and unexpected failures at most 1%. [NFR-4]
 
-### US-2 [Source: S?, UR-?]
+### US-2 [Source: S2, UR-3, UR-4, UR-5, UR-6]
 
-As a <role>,
+As a group officer,
 
-I want <capability>,
+I want to collaborate on announcements and manage events for the intended audience,
 
-so that <benefit>.
-
-Acceptance criteria:
-
--
--
-
-### US-3 [Source: S?, UR-?]
-
-As a <role>,
-
-I want <capability>,
-
-so that <benefit>.
+so that our group can publish reliable information and communicate corrections.
 
 Acceptance criteria:
 
--
--
+- AC-2.1: Given two approved officers in one verified group, when A saves an announcement draft, B can reopen and edit it; a non-approved user cannot read the draft or publish it, and an officer from another group cannot publish for this group. If A saves an older version after B's save, A sees a conflict and B's saved version remains. [FR-5, FR-6, FR-7]
+- AC-2.2: Given an upcoming, non-cancelled, non-hidden members-only event, when a signed-in non-member follows the group and opens its direct link, the event details and RSVP action are denied; a confirmed member can view and RSVP. A university-wide event is available to signed-in university users; an officer of another group cannot change its audience. [FR-8]
+- AC-2.3: Given students A and B currently RSVP'd and C withdrew, when the officer saves a new time or place, A and B each receive an in-service notice of old and new values within 60 seconds under A5, while C receives none. [FR-9, NFR-5]
+
+### US-3 [Source: S3, UR-7, UR-8, UR-16, UR-17]
+
+As a campus moderator,
+
+I want to investigate reports, hide harmful events, and review group appeals,
+
+so that students are protected and decisions remain accountable.
+
+Acceptance criteria:
+
+- AC-3.1: Given an event visible to a signed-in student, a report without a reason is rejected; a report with a reason stores the event content, reason, reporter, and submission time for a moderator to inspect. An unrelated student cannot read the report evidence. [FR-11, FR-12]
+- AC-3.2: Given a published event, with or without a previous user report, when a moderator hides it with a reason, its ordinary listing and direct-link access disappear and further RSVP attempts fail; event evidence is captured if needed and remains available to moderators, a decision record contains who/what/why/when, and the group's approved officers receive the decision notice. [FR-12, FR-13]
+- AC-3.3: Given the hidden event, an approved officer can submit a reasoned appeal for that group but cannot restore it; a moderator can review evidence and record a restore or uphold decision. Restoration applies the original audience restriction again. [FR-8, FR-12, FR-14]
+
+### US-4 [Source: S4, S6, UR-9, UR-10, UR-14]
+
+As a Student Affairs representative,
+
+I want a trustworthy pilot that serves the planned university community,
+
+so that students can identify checked groups without impersonation or repeated posts undermining trust.
+
+Acceptance criteria:
+
+- AC-4.1: Given an unverified group, when an ordinary officer tries to grant a badge, access is denied and no official badge appears; when Student Affairs verifies it, a badge appears with a stored verifier/time record. Revocation removes the badge and prevents further publication by that group. [FR-7, FR-10]
+- AC-4.2: Given the seeded 5,000-student/200-group pilot dataset, authorized users can retrieve every retained seeded account/group record permitted to their role and complete sign-in, follow, publication, RSVP, reporting, moderation, appeals, and cancellation workflows without capacity errors; a signed-out or failed-sign-in user cannot view campus content. [FR-1, NFR-2]
+- AC-4.3 [Should]: Given an announcement already published for a group, when an approved officer of that verified group repeats the identical A7 title/body/link within 10 minutes, no second announcement is published and the officer sees the rejection; a publication after that interval passes this duplicate check. [FR-17]
+
+### US-5 [Source: S5, S3, UR-12, UR-13]
+
+As a Data Protection Officer,
+
+I want only necessary personal data retained for the stated service purposes,
+
+so that cancelled-event attendance does not survive its deletion deadline.
+
+Acceptance criteria:
+
+- AC-5.1: Given a new university user and the A3 data inventory, registration and the pilot workflows require only the listed personal fields; no phone-number, birth-date, location-history, or optional profile fields are requested or stored as profile attributes. Personal information volunteered in report text follows A3/A6. [FR-15]
+- AC-5.2: Given an officer cancels an event at time T, new RSVPs are rejected; by T + 30 days, an inspection of all A6 storage locations finds no student-to-attendance records for that event, including a withdrawn RSVP or attendance identifiers copied into moderation evidence. An unresolved appeal does not postpone deletion. [FR-16, NFR-1]
 
 ## 6. MoSCoW summary
 
-List requirement or story IDs in every category. The Won't category must state
-what is excluded from this release.
-
-- Must:
-- Should:
-- Could:
-- Won't this release:
+- Must: UR-1–UR-13 and UR-16–UR-17; FR-1–FR-16; NFR-1–NFR-3 and NFR-5; the core paths in US-1–US-5. These cover the supplied first-release boundary, privacy obligations, and essential access controls. A proposed Must target still needs confirmation before becoming an agreed acceptance baseline.
+- Should: UR-14, FR-17, AC-4.3 (duplicate-announcement protection); NFR-4 and AC-1.5 (proposed response-time target). If capacity is limited, basic verified publishing/reporting remains Must; the precise automated duplicate policy and performance baseline can be renegotiated with S4/S2; S6 supplies abuse cases, not an approval role.
+- Could: UR-15, FR-18, AC-1.4 (date filtering, a proposed convenience within event discovery).
+- Won't this release: native mobile apps; direct messages; external users, including anonymous public event browsing; payments; video hosting; AI recommendations. These match Section 1's exclusions; phone-browser support remains Must.
 
 ## 7. Traceability
 
-Add at least four complete paths. Every row should connect evidence to a user
-requirement, a system requirement, and a user story.
-
 | Stakeholder need | User requirement | System requirement | User story |
 |---|---|---|---|
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| S1: stop checking multiple channels for followed groups | UR-1 | FR-2: combined followed-content view; NFR-4: assumed response target | US-1, AC-1.1, AC-1.5 |
+| S1/S5: attendance must start private | UR-2 | FR-3: RSVP/withdraw; FR-4: private default and per-event opt-in | US-1, AC-1.2 |
+| S1: phone and screen-reader access | UR-11 | NFR-3: completion of named core tasks under A4 | US-1, AC-1.3 |
+| S2: another officer can finish a draft | UR-3 | FR-5: shared drafts; FR-6: stale-save rejection | US-2, AC-2.1 |
+| S2: only approved officers publish | UR-4 | FR-7: publication authorization | US-2, AC-2.1 |
+| S2: members-only events stay within the group | UR-5 | FR-8: audience checks on lists, links, and RSVP | US-2, AC-2.2 |
+| S2: tell RSVP'd students about corrections | UR-6 | FR-9: old/new change notices; NFR-5: proposed 60-second deadline | US-2, AC-2.3 |
+| S3: reports show what was reported and why | UR-7 | FR-11: reported event content, reason, reporter, and time; FR-12: restricted decision/evidence records | US-3, AC-3.1 |
+| S3: hide harmful events immediately with accountability | UR-16, UR-17 | FR-13: hide without group approval or a prior report; FR-12: decision audit | US-3, AC-3.2 |
+| S3: preserve evidence for a group's appeal | UR-8, UR-7 | FR-14: appeal and moderator-only restoration; FR-11: report evidence; FR-12: decision history | US-3, AC-3.3 |
+| S4/S6: an official badge means a group was checked | UR-9 | FR-10: verifier-controlled badge; FR-7: verified publishing | US-4, AC-4.1 |
+| S4: university-community pilot for 5,000 students/200 groups | UR-10 | FR-1: university sign-in; NFR-2: pilot dataset capacity | US-4, AC-4.2 |
+| S6: compromised accounts repeat announcements | UR-14 | FR-17: proposed exact-duplicate rejection | US-4, AC-4.3 |
+| S5: collect only necessary personal information | UR-12 | FR-15: bounded A3 data inventory | US-5, AC-5.1 |
+| S5/S3: delete cancelled attendance without an appeal exception | UR-13 | FR-16: cancellation timestamp and RSVP closure; NFR-1: no attendance retained at 30 days | US-5, AC-5.2 |
+| S1: easier event discovery (team proposal) | UR-15 | FR-18: optional date filter | US-1, AC-1.4 |
 
 ## 8. Assumptions and open questions
 
