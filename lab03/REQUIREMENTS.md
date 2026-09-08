@@ -4,16 +4,16 @@ Name or team: Nino Matcharashvili
 
 Date: 2026-09-08
 
-Status: reviewed specification draft; proposed policies and quality targets need stakeholder confirmation.
+Status: working draft
 
-Evidence: S1 student attendee; S2 group officer; S3 campus moderator; S4 Student Affairs;
-S5 Data Protection Officer; S6 impersonation and repeated-post abuse cases.
-The release brief additionally fixes university sign-in and a browser-based release.
-Section 8 distinguishes team proposals from the supplied evidence.
+Use the source IDs `S1` to `S6` from the lab handout. Keep every requirement
+short enough to test and trace.
 
 ## 1. Release scope
 
 ### In scope
+
+List at least three capabilities that belong in the first release.
 
 - University sign-in and a browser-based pilot for 5,000 students and 200 groups before Orientation Week, including use from phone browsers.
 - Group verification and official badges; shared announcement drafts and publishing by approved officers; event creation and publication.
@@ -25,6 +25,8 @@ Section 8 distinguishes team proposals from the supplied evidence.
 
 ### Out of scope
 
+List at least two explicit exclusions.
+
 - Native mobile apps.
 - Direct messages.
 - External users, including anonymous public event browsing.
@@ -33,6 +35,11 @@ Section 8 distinguishes team proposals from the supplied evidence.
 - AI recommendations.
 
 ## 2. User requirements
+
+Write at least five customer-readable needs. Use one need per line and trace it
+to the stakeholder evidence.
+
+Format: `UR-1 [Must] ... [Source: S1]`
 
 - UR-1 [Must] Students need one place to follow groups and find their announcements and events. [Source: S1]
 - UR-2 [Must] Students need their RSVP kept private unless they choose to share it. [Source: S1, S5]
@@ -53,6 +60,11 @@ Section 8 distinguishes team proposals from the supplied evidence.
 - UR-17 [Must] Campus moderators need a record identifying who made each moderation decision. [Source: S3]
 
 ## 3. Functional requirements
+
+Write at least six observable system behaviours. Start each one with "The
+system shall" and trace it to one or more user requirements.
+
+Format: `FR-1 [Must] The system shall ... [Source: UR-1]`
 
 - FR-1 [Must] The system shall require a valid university sign-in before granting access to campus content or actions, and deny access when sign-in fails or is absent. [Source: UR-10]
 - FR-2 [Must] The system shall let a signed-in student follow or unfollow a group and show published announcements and events from followed groups in a combined view, subject to FR-8 and FR-13. [Source: UR-1]
@@ -75,6 +87,13 @@ Section 8 distinguishes team proposals from the supplied evidence.
 
 ## 4. Non-functional requirements
 
+Write at least four measurable quality requirements. State what is measured,
+the target, and the condition under which the target applies. If you introduce
+a number that is not in the handout, record it as an assumption or open
+question in Section 8.
+
+Format: `NFR-1 [Must] The system shall ... [Measure: target and condition] [Source: UR-1]`
+
 - NFR-1 [Must] The system shall delete cancelled-event attendance data by 30 days after cancellation. [Measure: zero retained records linking a student to that event's attendance at cancellation time + 30 days, checked across system-controlled operational stores, exports, logs, and backups under A6; an appeal does not extend the deadline.] [Source: UR-13]
 - NFR-2 [Must] The system shall support the stated pilot population. [Measure: with 5,000 student accounts and 200 group records loaded, all retained fixture records remain retrievable only as permitted by their access rules (deleted attendance is excluded) and the Must acceptance scenarios for sign-in, following, publication, RSVP, reporting, moderation, appeals, and cancellation complete without capacity errors; these counts do not specify concurrent traffic.] [Source: UR-10]
 - NFR-3 [Must] The system shall make the core student tasks usable with the proposed assistive and mobile configurations in A4. [Measure: 100% of sign-in, follow, event discovery, RSVP/privacy change, and reporting scenarios can be completed using keyboard-only desktop input and using the named phone screen reader; at a 360 CSS-pixel viewport, each task is also possible without horizontal page scrolling. Configuration and coverage targets are proposals.] [Source: UR-11]
@@ -82,6 +101,10 @@ Section 8 distinguishes team proposals from the supplied evidence.
 - NFR-5 [Must] The system shall make saved event time/place corrections available to affected students promptly. [Measure: in the A5 workload, a readable in-service notice exists for 100% of the students with a current RSVP at correction time within 60 seconds of each successful save; deadline and test load are proposed in A5.] [Source: UR-6]
 
 ## 5. User stories and acceptance criteria
+
+Write at least three stories from different stakeholder viewpoints. Each story
+needs at least two acceptance criteria. Across the set, include a failure,
+permission boundary, privacy rule, or other non-happy path.
 
 ### US-1 [Source: S1, S5, UR-1, UR-2, UR-11, UR-15]
 
@@ -158,12 +181,18 @@ Acceptance criteria:
 
 ## 6. MoSCoW summary
 
+List requirement or story IDs in every category. The Won't category must state
+what is excluded from this release.
+
 - Must: UR-1–UR-13 and UR-16–UR-17; FR-1–FR-16; NFR-1–NFR-3 and NFR-5; the core paths in US-1–US-5. These cover the supplied first-release boundary, privacy obligations, and essential access controls. A proposed Must target still needs confirmation before becoming an agreed acceptance baseline.
 - Should: UR-14, FR-17, AC-4.3 (duplicate-announcement protection); NFR-4 and AC-1.5 (proposed response-time target). If capacity is limited, basic verified publishing/reporting remains Must; the precise automated duplicate policy and performance baseline can be renegotiated with S4/S2; S6 supplies abuse cases, not an approval role.
 - Could: UR-15, FR-18, AC-1.4 (date filtering, a proposed convenience within event discovery).
 - Won't this release: native mobile apps; direct messages; external users, including anonymous public event browsing; payments; video hosting; AI recommendations. These match Section 1's exclusions; phone-browser support remains Must.
 
 ## 7. Traceability
+
+Add at least four complete paths. Every row should connect evidence to a user
+requirement, a system requirement, and a user story.
 
 | Stakeholder need | User requirement | System requirement | User story |
 |---|---|---|---|
@@ -186,11 +215,10 @@ Acceptance criteria:
 
 ## 8. Assumptions and open questions
 
-### Assumptions
+Separate decisions your team has assumed from questions that still need an
+answer.
 
-These are proposed team decisions, not facts supplied by the stakeholders. Numbers
-other than 5,000 students, 200 groups, and the 30-day cancellation deadline require
-confirmation. Acceptance scenarios describe future checks; no product has been built or tested.
+### Assumptions
 
 - A1: Student Affairs appoints verifiers and moderators and authorizes group officers. Group membership is an approved roster, not the follow list. Only verified groups may publish; revocation removes the badge and blocks new publications without automatically hiding existing content. The brief's university sign-in excludes anonymous/public access. Validate these policies with S2/S4.
 - A2: An RSVP is private to the student and that event's approved group officers for event administration. Moderators have no routine attendance-list access. Opt-in exposes only that student's name/RSVP to the event's permitted audience; opt-out removes it. Report evidence and decision records are restricted to moderators; officers receive their own group's decision notice and can submit an appeal. Confirm these access purposes with S1/S3/S5.

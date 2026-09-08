@@ -4,10 +4,8 @@ Name or team: Nino Matcharashvili
 
 Date: 2026-09-08
 
-This analysis uses sources S1–S6 from the CampusPulse brief. Power-interest
-classifications are working judgments based on each role and should be
-confirmed with the project sponsor. Power includes the ability to disrupt
-the service as well as formal decision-making authority.
+Read the stakeholder notes in the lab handout before completing this file.
+Use the stakeholder types and power-interest quadrants from Week 2, Lecture 2.
 
 Stakeholder types: end user, operations, business, regulator, negative stakeholder
 
@@ -69,7 +67,9 @@ Power-interest quadrants: key player, keep satisfied, keep informed, minimal eff
 
 ## Conflicts to resolve
 
-The following tensions need an explicit policy decision or stakeholder answer.
+Describe at least two real tensions. For each one, name both stakeholder IDs
+and either propose a decision or write a specific question that should go back
+to the stakeholders.
 
 ### Conflict 1
 

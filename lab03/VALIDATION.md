@@ -6,11 +6,13 @@ Reviewer: Codex (AI-assisted document review; stakeholder confirmation pending)
 
 Date: 2026-09-08
 
-This is a review of the specification against the supplied brief. Acceptance
-scenarios are proposed future tests; no application, load test, or accessibility
-test has been run.
+Review the completed `stakeholders.md` and `REQUIREMENTS.md`. Refer to specific
+IDs and evidence in every answer. A yes or no by itself is not enough.
 
 ## Validity
+
+Do the requirements represent what the stakeholders need? Which IDs did you
+check, and what evidence supports them?
 
 Response: S1's combined discovery and privacy needs appear in UR-1/UR-2,
 FR-2/FR-4, and US-1. S2's collaboration, approved publication, audiences, and
@@ -23,6 +25,8 @@ remain proposals for the named stakeholders to confirm.
 
 ## Consistency
 
+Do any requirements contradict one another or the release scope?
+
 Response: Section 1 and the Won't list exclude the same six areas; phone-browser
 support in UR-11/NFR-3 does not introduce a native app. FR-7/FR-8 prevent
 cross-group publication or audience changes. NFR-1/A6 keep the attendance
@@ -34,6 +38,9 @@ a generic notification. AC-2.3/AC-2.4, the correction/audience trace rows, A9, a
 describe the same policy.
 
 ## Completeness
+
+Is an important actor, normal flow, failure, permission, privacy rule, or
+boundary missing?
 
 Response: The document has 17 URs, 18 FRs, 5 NFRs, 5 stories, and 16 trace rows.
 It covers every service named in the first-release brief. Failure and boundary
@@ -48,6 +55,9 @@ These questions must be resolved before an agreed implementation baseline.
 
 ## Realism
 
+Can the proposed release and its quality targets reasonably be delivered? Mark
+unsupported targets as assumptions or open questions.
+
 Response: A browser-only release and the exclusions reduce the delivery scope,
 but feasibility cannot be confirmed without staffing and the actual Orientation
 Week date (Q1). NFR-2 uses 5,000 students and 200 groups as population counts,
@@ -59,6 +69,9 @@ evidence needs an agreed design with S3/S5 (A6/Q3). The document does not claim
 these targets have already been achieved.
 
 ## Verifiability
+
+Could a tester decide whether each requirement passes or fails? Identify any
+wording that is still vague.
 
 Response: FRs specify observable outcomes: FR-6 rejects a save after another
 officer changes the version; FR-8 denies an outsider's direct link; FR-17 has
