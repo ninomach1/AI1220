@@ -111,7 +111,7 @@ so that I can participate privately.
 
 Acceptance criteria:
 
-- AC-1.1: Following shows permitted group updates; unfollowing removes them. Hidden/member-restricted events stay inaccessible. [FR-2, FR-8, FR-13]
+- AC-1.1: Following shows permitted group updates; unfollowing removes them. Hidden events stay inaccessible to ordinary users; members-only events stay inaccessible to non-members. [FR-2, FR-8, FR-13]
 - AC-1.2: RSVP starts private; opt-in/out changes sharing. Cancellation deletes all A6 attendance links within 30 days. [FR-4, FR-16, NFR-1]
 
 ### US-2 [Source: S2, S3, S4, S6, UR-3, UR-4, UR-5, UR-6, UR-9, UR-16]
