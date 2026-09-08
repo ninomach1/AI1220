@@ -15,16 +15,16 @@ Power-interest quadrants: key player, keep satisfied, keep informed, minimal eff
 
 - Stakeholder: Student attendee.
 - Stakeholder type: End user.
-- Power-interest quadrant: Keep informed (low power, high interest).
+- Power-interest quadrant: Keep informed.
 - Main goal: Find group updates in one place.
 - Main concern: Private RSVP and screen-reader access.
-- How you would involve or monitor this stakeholder: Review phone access and privacy with students, including screen-reader users.
+- How you would involve or monitor this stakeholder: Review phone access and privacy with screen-reader users.
 
 ## S2
 
 - Stakeholder: Group officer.
 - Stakeholder type: End user.
-- Power-interest quadrant: Keep informed (low power, high interest).
+- Power-interest quadrant: Keep informed.
 - Main goal: Collaborate on announcements and manage events.
 - Main concern: Approved publishing, audience restrictions, and correction notices.
 - How you would involve or monitor this stakeholder: Review drafting, permissions, and corrections.
@@ -33,7 +33,7 @@ Power-interest quadrants: key player, keep satisfied, keep informed, minimal eff
 
 - Stakeholder: Campus moderator.
 - Stakeholder type: Operations.
-- Power-interest quadrant: Key player (high power, high interest).
+- Power-interest quadrant: Key player.
 - Main goal: Hide harmful events and review appeals.
 - Main concern: Preserve reported content, reasons, and decision-maker records.
 - How you would involve or monitor this stakeholder: Review evidence and appeal workflows.
@@ -42,7 +42,7 @@ Power-interest quadrants: key player, keep satisfied, keep informed, minimal eff
 
 - Stakeholder: Student Affairs.
 - Stakeholder type: Business.
-- Power-interest quadrant: Key player (high power, high interest).
+- Power-interest quadrant: Key player.
 - Main goal: Pilot for 5,000 students and 200 groups before Orientation Week.
 - Main concern: Badges identify only checked groups.
 - How you would involve or monitor this stakeholder: Confirm verification, deadline, and peak usage.
@@ -51,7 +51,7 @@ Power-interest quadrants: key player, keep satisfied, keep informed, minimal eff
 
 - Stakeholder: Data Protection Officer.
 - Stakeholder type: Regulator (privacy oversight).
-- Power-interest quadrant: Key player (high power, high interest).
+- Power-interest quadrant: Key player.
 - Main goal: Minimize personal-data collection.
 - Main concern: Private attendance; delete cancelled-event attendance within 30 days.
 - How you would involve or monitor this stakeholder: Review data collection, access, and deletion.
@@ -60,7 +60,7 @@ Power-interest quadrants: key player, keep satisfied, keep informed, minimal eff
 
 - Stakeholder: Impersonators and compromised-account abusers.
 - Stakeholder type: Negative stakeholder.
-- Power-interest quadrant: Key player (high potential power through disruption; high interest in abuse).
+- Power-interest quadrant: Key player (high potential disruption, high interest).
 - Main goal: Publish phishing events or repeated announcements.
 - Main concern: Detection and loss of publishing access.
 - How you would involve or monitor this stakeholder: Monitor impersonation and repeated posting.
@@ -75,7 +75,7 @@ to the stakeholders.
 
 - Stakeholders: S3 and S5.
 - What conflicts: Appeal evidence may retain attendance beyond the cancellation-deletion deadline.
-- Proposed decision or follow-up question: Delete attendance links within 30 days of cancellation. Ask: "Which evidence fields and retention period are essential for appeals?"
+- Proposed decision or follow-up question: Delete attendance within 30 days of cancellation; retain separate appeal evidence.
 
 ### Conflict 2
 
